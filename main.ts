@@ -16,10 +16,7 @@ export default class DevConsoleEnablerPlugin extends Plugin {
 		const ribbonIconEl = this.addRibbonIcon('bug-off', 'Show/Hide DevTools Console', (evt: MouseEvent) => {
 			electronWindow.toggleDevTools();
 		});
-		// Perform additional things with the ribbon
-		ribbonIconEl.addClass('my-plugin-ribbon-class');
 
-		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
 			id: 'show-hide-devtools-console',
 			name: 'Show/Hide DevTools Console',
