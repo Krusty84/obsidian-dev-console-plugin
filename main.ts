@@ -13,13 +13,13 @@ export default class DevConsoleEnablerPlugin extends Plugin {
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('bug-off', 'Show/Hide DevTools Console', (evt: MouseEvent) => {
+		const ribbonIconEl = this.addRibbonIcon('bug-off', 'Show/hide dev-tools console', (evt: MouseEvent) => {
 			electronWindow.toggleDevTools();
 		});
 
 		this.addCommand({
 			id: 'show-hide-devtools-console',
-			name: 'Show/Hide DevTools Console',
+			name: 'Show/hide dev-tools console',
 			callback: () => {
 				electronWindow.toggleDevTools();
 			}
